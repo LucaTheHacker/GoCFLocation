@@ -7,7 +7,7 @@
  * You should have received a copy of the GNU Affero General Public License v3.0
  * along with GoCloudFlareInfos. If not, see <https://github.com/LucaTheHacker/GoCloudFlareInfos/blob/main/LICENSE>.
  */
- package GoCFLocation
+package GoCFLocation
 
 import (
 	"io/ioutil"
@@ -15,6 +15,7 @@ import (
 	"strings"
 )
 
+// GetData returns parsed information 
 func GetData(website string) (map[string]string, error) {
 	resp, err := http.Get(website + "/cdn-cgi/trace")
 	if err != nil {
